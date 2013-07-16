@@ -1,0 +1,6 @@
+<%= form_tag("/admin/users/bulk_edit", method: "post") do %>
+    <%= hidden_field_tag(:user_ids, selected) %>
+    <%= label_tag 'New Country Name' %>
+    <%= text_field(:user, :country)%>
+    <%= submit_tag(:Update) %>
+<% end %>

@@ -1,6 +1,8 @@
 SampleApp::Application.routes.draw do
 
+  devise_for :admin_users, ActiveAdmin::Devise.config
   root to: "static_pages#home"
+  ActiveAdmin.routes(self)
   match "/contact",to: "static_pages#contact"
   match "/about",to: "static_pages#about"
   match "/help",to: "static_pages#help"
